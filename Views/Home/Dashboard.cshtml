@@ -1,0 +1,29 @@
+
+<div >
+    <div class="d-flex justify-content-between border-bottom border-dark m-3">
+        <h3>Welcome @Context.Session.GetString("UserName")</h3>
+        <form action="/Logout" method="post">
+            <input type="submit" value="Logout" class="btn btn-danger">
+        </form>
+    </div>
+    <div class="d-flex justify-content-center flex-column text-center">
+
+        <h1>@Context.Session.GetInt32("MyNum")</h1>
+    </div>
+    <div class="d-flex justify-content-center">
+        <form action="/plusone" method="post">
+            <button class="btn btn-danger btn-lg m-1" value="plusone">+1</button>
+        </form>
+        <form action="/minusone" method="post">
+            <button class="btn btn-info btn-lg m-1" value="minusone">-1</button>
+        </form>
+        <form action="/timestwo" method="post">
+            <button class="btn btn-success btn-lg m-1" value="timestwo">x2</button>
+        </form>
+        <form action="/random" method="post">
+            <button class="btn btn-warning btn-lg m-1" value="random">+ Random</button>
+        </form>
+    </div>
+    <h3 class="d-flex justify-content-center m-3">Click a button!</h3>
+</div>
+
